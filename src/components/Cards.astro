@@ -15,8 +15,7 @@ const style = display
       </h2>
 
       <div
-      id="cards"
-        class={` ${style} mt-5 grid gap-2`}
+        class={`cards ${style} mt-5 grid gap-2`}
       >
         {props.data.map((item) => {
           return (
@@ -24,7 +23,7 @@ const style = display
               key={item.name} 
               href={item.url} rel="noopener noreferrer" target="_blank"
                 title={item.name + " - " + item.description}
-                class="card relative flex h-28  flex-col items-center justify-center gap-3 rounded-md border border-transparent bg-neutral-100 p-8 text-neutral-900  shadow  transition-all hover:z-10 hover:origin-center hover:border-neutral-400 hover:text-neutral-1000 hover:shadow-lg active:!scale-90 dark:bg-neutral-1000 dark:text-neutral-200 dark:shadow-md dark:hover:border-neutral-600 dark:hover:text-neutral-100 lg:hover:!scale-125"
+                class="card relative flex h-28  flex-col items-center justify-center gap-3 rounded-md border border-transparent bg-neutral-100 p-8 text-neutral-900  shadow  transition-all hover:z-10 hover:origin-center  hover:text-neutral-1000 hover:shadow-lg active:!scale-105 dark:bg-neutral-1000 dark:text-neutral-200 dark:shadow-md  dark:hover:text-neutral-100 lg:hover:!scale-110"
               >
                 <div class="card-content flex flex-col items-center justify-center">
                   <item.Icon size='2.5em'/>
@@ -40,14 +39,16 @@ const style = display
 
 
     <script>
-      document.getElementById("cards").onmousemove = e => {
-        for(const card of document.getElementsByClassName("card")) {
+        for(const cards of document.getElementsByClassName("cards")) {
+      cards.addEventListener("mousemove", (e) => {
+        for (const card of document.getElementsByClassName("card")) {
     const rect = card.getBoundingClientRect(),
-          x = e.clientX - rect.left,
-          y = e.clientY - rect.top;
-
-    card.style.setProperty("--mouse-x", `${x}px`);
-    card.style.setProperty("--mouse-y", `${y}px`);
-  };
-      }
+      x = e.clientX - rect.left,
+      y = e.clientY - rect.top;
+    const c = card as HTMLElement;
+    c.style.setProperty("--mouse-x", `${x}px`);
+    c.style.setProperty("--mouse-y", `${y}px`);
+  }
+      });
+     }
     </script>

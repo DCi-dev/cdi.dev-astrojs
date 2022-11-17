@@ -148,7 +148,7 @@ body.dark {
 	}
 
 	/* Cards - START */
-	#cards:hover > .card::after {
+	.cards:hover > .card::after {
 		opacity: 1;
 	}
 	.card:hover::before {

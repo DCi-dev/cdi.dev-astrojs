@@ -1,4 +1,4 @@
-import { Stack } from "@lib/types/index";
+import type { Stack } from "@lib/types/index";
 import { FaSearch } from "react-icons/fa";
 import {
   SiBitwarden,
