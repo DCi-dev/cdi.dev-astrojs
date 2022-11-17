@@ -1,0 +1,62 @@
+---
+import { BsDiscord, BsGithub, BsLinkedin } from "react-icons/bs";
+import { MdMail } from "react-icons/md";
+
+import FooterItem from "./FooterItem.astro";
+import SocialLinks from "./SocialLinks.astro";
+---
+
+<footer
+  class="mt-auto w-full bg-neutral-100 p-4 dark:bg-neutral-1000 print:hidden sm:p-6"
+>
+  <hr
+    class="my-6 border-neutral-200 dark:border-neutral-700 sm:mx-auto lg:my-8"
+  />
+  <div class="md:flex md:justify-evenly">
+    {/* Logo */}
+    <div class="mb-6 md:mb-0">
+      <a href="/" passHref class="flex items-center">
+        <div class="flex items-center">
+          <span class="font-squartiqa text-6xl text-primary-600"> CDi</span>
+        </div>
+      </a>
+    </div>
+
+    {/* Menu */}
+    <div class="grid grid-cols-2 gap-8 sm:grid-cols-3 sm:gap-6">
+      <div class="flex flex-col gap-4 capitalize">
+        <FooterItem href="/">Home</FooterItem>
+        <FooterItem href="/about">About</FooterItem>
+        <FooterItem href="/projects">Projects</FooterItem>
+      </div>
+      <div class="flex flex-col gap-4 capitalize">
+        <FooterItem href="/certificates">Certificates</FooterItem>
+        <FooterItem href="/stack">Stack</FooterItem>
+        <FooterItem href="/contact">Contact</FooterItem>
+      </div>
+      <div class="flex flex-col gap-4 capitalize"></div>
+    </div>
+  </div>
+
+  <div class="pt-12 pb-8 sm:flex sm:items-center sm:justify-center">
+    <div class="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
+      <span
+        class="self-center font-ubuntu text-2xl text-neutral-900 dark:text-neutral-200"
+      >
+        Get in touch:
+      </span>
+      <SocialLinks href="https://github.com/DCi-dev">
+      <BsGithub size="1.5em" />
+      </SocialLinks>
+      <SocialLinks href="https://www.linkedin.com/in/dan-cristian-ilie/">
+      <BsLinkedin size="1.5em" />
+      </SocialLinks>
+      <SocialLinks href="https://discord.com/users/CDi#4953">
+      <BsDiscord size="1.5em" />
+      </SocialLinks>
+      <SocialLinks href="mailto:contact@cdi.dev">
+      <MdMail size="1.5em" />
+      </SocialLinks>
+    </div>
+  </div>
+</footer>

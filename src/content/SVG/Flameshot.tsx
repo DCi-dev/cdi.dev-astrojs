@@ -1,0 +1,28 @@
+export default function Flameshot() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 150 158"
+      width="40"
+      height="40"
+    >
+      <g fillRule="evenodd" stroke="none">
+        <path
+          fill="currentColor"
+          d="M56.333 42.413C123.747 29.401 126.337 0 126.337 0s-5.309 91.118-54.576 95.938C9.328 102.047 0 131.5 0 131.5s16.696-81.436 56.333-89.087z"
+          transform="translate(22.955 25.264)"
+        ></path>
+        <path
+          fill="currentColor"
+          d="M19.803 63.656C76.926 39.465 71.693 0 71.693 0s31.538 80.51-15.74 99.28C3.136 120.246 5.486 156.061 5.486 156.061s-19.233-78.197 14.316-92.406z"
+          transform="translate(18.807)"
+        ></path>
+        <path
+          fill="currentColor"
+          d="M4.958 72C37.05 29.682 29.833 0 29.833 0S70.95 51.56 42.97 83.493c-31.256 35.674-17.644 60.492-17.644 60.492S-13.45 96.273 4.957 72.001z"
+          transform="translate(0 13.059)"
+        ></path>
+      </g>
+    </svg>
+  );
+}
