@@ -1,9 +1,7 @@
 import { useStore } from '@nanostores/react';
 import React from 'react';
 import toast, { Toaster } from 'react-hot-toast';
-import { Details } from '../store/details';
-// import Ripples from 'react-ripples';
-import { z } from 'zod';
+import { Details } from '../../store/details';
 
 export default function ContactUs() {
 	const details = useStore(Details);
