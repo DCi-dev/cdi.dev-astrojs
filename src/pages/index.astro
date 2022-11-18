@@ -4,15 +4,13 @@ import Cards from "@components/Cards.astro";
 import skills from "@content/skillsData";
 
 const itemsNumber =
-    "grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5";
+  "grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5";
 ---
 
 <Layout title="Welcome to Astro.">
-  <main class='pageTop'>
-
-<!-- Skills -->
-<Cards props={skills} display={itemsNumber} />
-
+  <main class="pageTop">
+    <!-- Skills -->
+    <Cards props={skills} display={itemsNumber} />
   </main>
 </Layout>
 

@@ -1,6 +1,6 @@
 ---
-import TopNavbar from "@components/layout/TopNavbar.astro";
 import Footer from "@components/layout/Footer.astro";
+import TopNavbar from "@components/layout/TopNavbar.astro";
 
 import "../styles/global.css";
 
@@ -43,7 +43,6 @@ const { title } = Astro.props;
 
       window.localStorage.setItem("theme", theme);
     </script>
-		
   </head>
   <body>
     <div class="flex min-h-screen flex-col w-screen">
@@ -51,8 +50,8 @@ const { title } = Astro.props;
       <slot />
       <Footer />
     </div>
-		<script>
-			 const handleToggleClick = () => {
+    <script>
+      const handleToggleClick = () => {
         const element = document.documentElement;
         element.classList.toggle("dark");
 
@@ -63,6 +62,6 @@ const { title } = Astro.props;
       document
         .getElementById("themeToggle")
         .addEventListener("click", handleToggleClick);
-			</script>
+    </script>
   </body>
 </html>

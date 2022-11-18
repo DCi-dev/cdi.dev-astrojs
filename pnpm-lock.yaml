@@ -22,7 +22,6 @@ specifiers:
   react-dom: ^18.0.0
   react-hot-toast: ^2.4.0
   react-icons: ^4.6.0
-  react-ripples: ^2.2.1
   tailwind-scrollbar-hide: ^1.1.7
   tailwindcss: ^3.0.24
   zod: ^3.18.0
@@ -44,7 +43,6 @@ dependencies:
   react-dom: 18.2.0_react@18.2.0
   react-hot-toast: 2.4.0_owo25xnefcwdq3zjgtohz6dbju
   react-icons: 4.6.0_react@18.2.0
-  react-ripples: 2.2.1
   tailwind-scrollbar-hide: 1.1.7
   tailwindcss: 3.2.4
   zod: 3.19.1
@@ -4735,13 +4733,6 @@ packages:
       react: "*"
     dependencies:
       react: 18.2.0
-    dev: false
-
-  /react-ripples/2.2.1:
-    resolution:
-      {
-        integrity: sha512-TfLjgZICQlsYCN2iX4fdeZNjoDzhJVC7r+R3irqyaNvCtWezouS9j+sE+nwSk747irtV8RKRDHmwMmsNBOw8Qg==,
-      }
     dev: false
 
   /react/18.2.0:

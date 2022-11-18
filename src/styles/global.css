@@ -3,196 +3,196 @@
 @tailwind utilities;
 
 @font-face {
-	font-family: 'Squartiqa4FStrike';
-	font-style: normal;
-	font-weight: 400;
-	font-display: swap;
-	src: url(/fonts/Squartiqa/Squartiqa4FStrike.ttf) format('truetype');
+  font-family: "Squartiqa4FStrike";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/Squartiqa/Squartiqa4FStrike.ttf) format("truetype");
 }
 /* Font Ubuntu */
 @font-face {
-	font-family: 'Ubuntu';
-	font-style: normal;
-	font-weight: 400;
-	font-display: swap;
-	src: url(/fonts/Ubuntu/Ubuntu-Regular.ttf) format('truetype');
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/Ubuntu/Ubuntu-Regular.ttf) format("truetype");
 }
 @font-face {
-	font-family: 'Ubuntu';
-	font-style: italic;
-	font-weight: 400;
-	font-display: swap;
-	src: url(/fonts/Ubuntu/Ubuntu-Italic.ttf) format('truetype');
+  font-family: "Ubuntu";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/Ubuntu/Ubuntu-Italic.ttf) format("truetype");
 }
 @font-face {
-	font-family: 'Ubuntu';
-	font-style: normal;
-	font-weight: 700;
-	font-display: swap;
-	src: url(/fonts/Ubuntu/Ubuntu-Bold.ttf) format('truetype');
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts/Ubuntu/Ubuntu-Bold.ttf) format("truetype");
 }
 @font-face {
-	font-family: 'Ubuntu';
-	font-style: italic;
-	font-weight: 700;
-	font-display: swap;
-	src: url(/fonts/Ubuntu/Ubuntu-BoldItalic.ttf) format('truetype');
+  font-family: "Ubuntu";
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts/Ubuntu/Ubuntu-BoldItalic.ttf) format("truetype");
 }
 
 /* Font Open Sans */
 @font-face {
-	font-family: 'OpenSans';
-	font-style: normal;
-	font-weight: 400;
-	font-display: swap;
-	src: url(/fonts/OpenSans/OpenSans-Regular.ttf) format('truetype');
+  font-family: "OpenSans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/OpenSans/OpenSans-Regular.ttf) format("truetype");
 }
 @font-face {
-	font-family: 'OpenSans';
-	font-style: italic;
-	font-weight: 400;
-	font-display: swap;
-	src: url(/fonts/OpenSans/OpenSans-Italic.ttf) format('truetype');
+  font-family: "OpenSans";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/OpenSans/OpenSans-Italic.ttf) format("truetype");
 }
 @font-face {
-	font-family: 'Ubuntu';
-	font-style: normal;
-	font-weight: 700;
-	font-display: swap;
-	src: url(/fonts/OpenSans/OpenSans-Bold.ttf) format('truetype');
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts/OpenSans/OpenSans-Bold.ttf) format("truetype");
 }
 @font-face {
-	font-family: 'Ubuntu';
-	font-style: italic;
-	font-weight: 700;
-	font-display: swap;
-	src: url(/fonts/OpenSans/OpenSans-BoldItalic.ttf) format('truetype');
+  font-family: "Ubuntu";
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts/OpenSans/OpenSans-BoldItalic.ttf) format("truetype");
 }
 
 body,
 html {
-	overflow-x: hidden;
-	scroll-behavior: auto;
+  overflow-x: hidden;
+  scroll-behavior: auto;
 }
 body::-webkit-scrollbar {
-	width: 6px;
+  width: 6px;
 }
 
 html.light {
-	background-color: hsl(0, 0%, 88%);
+  background-color: hsl(0, 0%, 88%);
 }
 html.dark {
-	background-color: hsl(0, 0%, 13%);
+  background-color: hsl(0, 0%, 13%);
 }
 
 /* Adding Scroll Margin for top */
 * {
-	scroll-margin-top: 80px;
+  scroll-margin-top: 80px;
 }
 @media screen and (max-width: 640px) {
-	* {
-		scroll-margin-top: 60px;
-	}
-	body::-webkit-scrollbar {
-		width: 2px;
-	}
+  * {
+    scroll-margin-top: 60px;
+  }
+  body::-webkit-scrollbar {
+    width: 2px;
+  }
 }
 
 pre::-webkit-scrollbar {
-	display: none;
+  display: none;
 }
 
 body.dark {
-	background-color: hsl(0, 0%, 13%);
+  background-color: hsl(0, 0%, 13%);
 }
 
 ::-webkit-scrollbar {
-	width: 6px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-	background: transparent;
+  background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-	background-color: hsl(0, 0%, 53%);
+  background-color: hsl(0, 0%, 53%);
 }
 
 .dark::-webkit-scrollbar-thumb {
-	background-color: hsl(0, 0%, 91%);
+  background-color: hsl(0, 0%, 91%);
 }
 
 .no-scrollbar::-webkit-scrollbar {
-	display: none;
+  display: none;
 }
 
 .lock-scroll {
-	overflow: hidden !important;
+  overflow: hidden !important;
 }
 
 /* Nprogress bar Custom Styling (force) : STARTS */
 #nprogress .bar {
-	background-color: hsl(42, 87%, 55%) !important;
-	height: 3px !important;
+  background-color: hsl(42, 87%, 55%) !important;
+  height: 3px !important;
 }
 .dark #nprogress .bar {
-	background: hsl(44, 92%, 63%) !important;
+  background: hsl(44, 92%, 63%) !important;
 }
 #nprogress .peg {
-	box-shadow: none !important;
+  box-shadow: none !important;
 }
 /* Nprogress bar Custom Styling (force) : ENDS */
 
 @layer components {
-	.pageTop {
-		@apply relative mx-auto mt-11 mb-10 w-full max-w-6xl p-4 text-neutral-900 dark:text-neutral-200 md:mt-16 2xl:max-w-6xl 3xl:max-w-7xl;
-	}
+  .pageTop {
+    @apply relative mx-auto mt-11 mb-10 w-full max-w-6xl p-4 text-neutral-900 dark:text-neutral-200 md:mt-16 2xl:max-w-6xl 3xl:max-w-7xl;
+  }
 
-	/* Cards - START */
-	.cards:hover > .card::after {
-		opacity: 1;
-	}
-	.card:hover::before {
-		opacity: 1;
-	}
+  /* Cards - START */
+  .cards:hover > .card::after {
+    opacity: 1;
+  }
+  .card:hover::before {
+    opacity: 1;
+  }
 
-	.card::before,
-	.card::after {
-		border-radius: inherit;
-		content: '';
-		height: 100%;
-		left: 0px;
-		opacity: 0;
-		position: absolute;
-		top: 0px;
-		transition: opacity 500ms;
-		width: 100%;
-	}
+  .card::before,
+  .card::after {
+    border-radius: inherit;
+    content: "";
+    height: 100%;
+    left: 0px;
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    transition: opacity 500ms;
+    width: 100%;
+  }
 
-	.card::before {
-		background: radial-gradient(
-			400px circle at var(--mouse-x) var(--mouse-y),
-			hsl(42, 87%, 55%, 0.5),
-			transparent 40%
-		) !important;
-		z-index: 3;
-	}
+  .card::before {
+    background: radial-gradient(
+      400px circle at var(--mouse-x) var(--mouse-y),
+      hsl(42, 87%, 55%, 0.5),
+      transparent 40%
+    ) !important;
+    z-index: 3;
+  }
 
-	.card::after {
-		background: radial-gradient(
-			200px circle at var(--mouse-x) var(--mouse-y),
-			hsl(44, 92%, 63%, 0.4),
-			transparent 40%
-		) !important;
-		z-index: 1;
-	}
+  .card::after {
+    background: radial-gradient(
+      200px circle at var(--mouse-x) var(--mouse-y),
+      hsl(44, 92%, 63%, 0.4),
+      transparent 40%
+    ) !important;
+    z-index: 1;
+  }
 
-	.card > .card-content {
-		background-color: inherit;
-		border-radius: inherit;
-		inset: 1px;
-		padding-bottom: 20px;
-		position: absolute;
-		z-index: 2;
-	}
-	/* Cards - END */
+  .card > .card-content {
+    background-color: inherit;
+    border-radius: inherit;
+    inset: 1px;
+    padding-bottom: 20px;
+    position: absolute;
+    z-index: 2;
+  }
+  /* Cards - END */
 }
