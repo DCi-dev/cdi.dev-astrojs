@@ -1,66 +1,38 @@
-import { useState } from 'react';
+import { useStore } from '@nanostores/react';
+import React from 'react';
 import toast, { Toaster } from 'react-hot-toast';
+import { Details } from '../store/details';
 // import Ripples from 'react-ripples';
 import { z } from 'zod';
 
 export default function ContactUs() {
-	const [firstName, setFirstName] = useState('');
-	const [lastName, setLastName] = useState('');
-	const [email, setEmail] = useState('');
-	const [subject, setSubject] = useState('');
-	const [message, setMessage] = useState('');
+	const details = useStore(Details);
 
-	const [loading, setLoading] = useState(false);
-
-	const handleSubmit = async (e: { preventDefault: () => void }) => {
+	const handleSubmit = async (e) => {
 		e.preventDefault();
-		setLoading(true);
-		const isValidFormSchema = z.object({
-			firstName: z.string().min(3).max(50),
-			lastName: z.string().min(3).max(50),
-			email: z.string().email(),
-			subject: z.string().min(3).max(50),
-			message: z.string().min(3).max(500),
-		});
-
-		const isValidForm = isValidFormSchema.safeParse({
-			firstName,
-			lastName,
-			email,
-			subject,
-			message,
-		});
-
-		if (isValidForm.success) {
-			const res = await fetch('/api/sendgrid', {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json',
-				},
-				body: JSON.stringify({
-					firstName,
-					lastName,
-					email,
-					subject,
-					message,
-				}),
+		if (!details.sent) {
+			// Check if the message is sent already
+			Details.setKey('sent', true);
+			Details.setKey('loading', true);
+			const params = {
+				firstname: details.firstname,
+				lastname: details.lastname,
+				email: details.email,
+				subject: details.subject,
+				message: details.message,
+			}; // Request to serverless function with the query
+			await fetch('/api/send?' + new URLSearchParams(params)).then((res) => {
+				console.log(res.status);
+				if (res.status === 200) {
+					Details.setKey('loading', false);
+					toast.success('Message Sent!');
+				} else {
+					Details.setKey('loading', false);
+					toast.error('Message Failed to Send!');
+				}
 			});
-
-			if (res.status === 200) {
-				toast.success('Message Sent ✌!');
-				setLoading(false);
-				setFirstName('');
-				setLastName('');
-				setEmail('');
-				setSubject('');
-				setMessage('');
-			} else {
-				toast.error('Something went wrong');
-				setLoading(false);
-			}
 		} else {
-			toast.error('Please fill all the fields');
-			setLoading(false);
+			return;
 		}
 	};
 
@@ -85,7 +57,7 @@ export default function ContactUs() {
 							required
 							value={firstName}
 							onChange={(e) => {
-								setFirstName(e.target.value);
+								Details.setKey('firstname', e.target.value);
 							}}
 						/>
 						<label
@@ -104,7 +76,7 @@ export default function ContactUs() {
 							required
 							value={lastName}
 							onChange={(e) => {
-								setLastName(e.target.value);
+								Details.setKey('lastname', e.target.value);
 							}}
 						/>
 						<label
@@ -124,7 +96,7 @@ export default function ContactUs() {
 						required
 						value={email}
 						onChange={(e) => {
-							setEmail(e.target.value);
+							Details.setKey('email', e.target.value);
 						}}
 					/>
 					<label
@@ -143,7 +115,7 @@ export default function ContactUs() {
 						required
 						value={subject}
 						onChange={(e) => {
-							setSubject(e.target.value);
+							Details.setKey('subject', e.target.value);
 						}}
 					/>
 					<label
@@ -161,7 +133,7 @@ export default function ContactUs() {
 						required
 						value={message}
 						onChange={(e) => {
-							setMessage(e.target.value);
+							Details.setKey('message', e.target.value);
 						}}
 					/>
 					<label

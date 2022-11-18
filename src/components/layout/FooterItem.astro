@@ -9,9 +9,9 @@ const isActive = href === pathname || href === pathname.replace(/\/$/, "");
   <div
     class={`${
       isActive
-        ? "text-neutral-900 dark:text-neutral-200"
+        ? "font-bold text-neutral-900 dark:text-primary-600"
         : " text-neutral-600 dark:text-neutral-400"
-    } w-fit font-bold hover:text-neutral-1000 hover:underline dark:hover:text-neutral-100`}
+    } w-fit  hover:text-neutral-1000 hover:underline dark:hover:text-neutral-100`}
   >
     <slot />
   </div>
