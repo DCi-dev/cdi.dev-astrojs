@@ -142,12 +142,8 @@ export default function ContactUs() {
 							type='submit'
 							className='relative w-full  overflow-hidden rounded-lg bg-primary-600 px-4 py-3 text-center text-sm font-bold text-neutral-100 outline-none transition duration-300 active:scale-95 '>
 							<div className='relative flex w-full items-center justify-center'>
-								<p
-									className={
-										loading ? 'mr-3 inline-flex animate-spin' : 'hidden'
-									}></p>
 								<p className='text-md  font-bold text-neutral-1000 md:text-lg'>
-									{loading ? 'Sending...' : 'Send'}
+									Send
 								</p>
 							</div>
 						</button>
