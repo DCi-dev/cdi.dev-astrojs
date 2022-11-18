@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
-import { AiOutlineLoading } from 'react-icons/ai';
 // import Ripples from 'react-ripples';
 import { z } from 'zod';
 
@@ -181,9 +180,7 @@ export default function ContactUs() {
 								<p
 									className={
 										loading ? 'mr-3 inline-flex animate-spin' : 'hidden'
-									}>
-									<AiOutlineLoading className='text-xl font-bold' />
-								</p>
+									}></p>
 								<p className='text-md  font-bold text-neutral-1000 md:text-lg'>
 									{loading ? 'Sending...' : 'Send'}
 								</p>

@@ -1,6 +1,5 @@
 ---
-import { BsDiscord, BsGithub, BsLinkedin } from "react-icons/bs";
-import { MdMail } from "react-icons/md";
+import { Icon } from "astro-icon";
 
 import FooterItem from "./FooterItem.astro";
 import SocialLinks from "./SocialLinks.astro";
@@ -15,7 +14,7 @@ import SocialLinks from "./SocialLinks.astro";
   <div class="md:flex md:justify-evenly">
     {/* Logo */}
     <div class="mb-6 md:mb-0">
-      <a href="/" passHref class="flex items-center">
+      <a href="/" class="flex items-center">
         <div class="flex items-center">
           <span class="font-squartiqa text-6xl text-primary-600"> CDi</span>
         </div>
@@ -46,16 +45,16 @@ import SocialLinks from "./SocialLinks.astro";
         Get in touch:
       </span>
       <SocialLinks href="https://github.com/DCi-dev">
-        <BsGithub size="1.5em" />
+        <Icon name="uiw:github" size="1.5em" />
       </SocialLinks>
       <SocialLinks href="https://www.linkedin.com/in/dan-cristian-ilie/">
-        <BsLinkedin size="1.5em" />
+        <Icon name="simple-icons:linkedin" size="1.5em" />
       </SocialLinks>
       <SocialLinks href="https://discord.com/users/CDi#4953">
-        <BsDiscord size="1.5em" />
+        <Icon name="akar-icons:discord-fill" size="1.5em" />
       </SocialLinks>
       <SocialLinks href="mailto:contact@cdi.dev">
-        <MdMail size="1.5em" />
+        <Icon name="mdi:email" size="1.5em" />
       </SocialLinks>
     </div>
   </div>

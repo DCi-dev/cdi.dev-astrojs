@@ -1,4 +1,5 @@
 ---
+import { Icon } from "astro-icon";
 export interface Props extends astroHTML.JSX.AnchorHTMLAttributes {}
 const { props, display } = Astro.props;
 const style = display;
@@ -16,7 +17,6 @@ const style = display;
       props.data.map((item) => {
         return (
           <a
-            key={item.name}
             href={item.url}
             rel="noopener noreferrer"
             target="_blank"
@@ -24,7 +24,7 @@ const style = display;
             class="card relative flex h-28  flex-col items-center justify-center gap-3 rounded-md border border-transparent bg-neutral-100 p-8 text-neutral-900  shadow  transition-all hover:z-10 hover:origin-center  hover:text-neutral-1000 hover:shadow-lg active:!scale-105 dark:bg-neutral-1000 dark:text-neutral-200 dark:shadow-md  dark:hover:text-neutral-100 lg:hover:!scale-110"
           >
             <div class="card-content flex flex-col items-center justify-center">
-              <item.Icon size="2.5em" />
+              <Icon name={item.icon} size="2.5em" />
               <p class="absolute bottom-3 select-none text-sm font-opensans">
                 {item.name}
               </p>

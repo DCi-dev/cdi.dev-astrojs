@@ -1,11 +1,9 @@
-import type { IconType } from "react-icons";
-
 export type Skill = {
   title: string;
   data: {
     name: string;
     description: string;
-    Icon: IconType;
+    icon: string;
     url: string;
   }[];
 };
@@ -15,7 +13,7 @@ export type Social = {
   data: {
     name: string;
     description: string;
-    Icon: IconType;
+    icon: string;
     url: string;
   }[];
 };
@@ -25,7 +23,7 @@ export type Stack = {
   data: {
     name: string;
     description: string;
-    Icon: IconType;
+    icon: string;
     url: string;
   }[];
 };
