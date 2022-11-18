@@ -53,7 +53,6 @@ export default function ContactUs() {
 							className='peer mt-2 block w-full appearance-none border-0 border-b-2 border-neutral-300 bg-transparent py-2 px-1 text-sm text-neutral-900 focus:border-neutral-1000 focus:outline-none focus:ring-0 dark:border-neutral-600 dark:text-neutral-100 dark:focus:border-neutral-100'
 							placeholder=' '
 							required
-							value={firstname}
 							onChange={(e) => {
 								Details.setKey('firstname', e.target.value);
 							}}
@@ -72,7 +71,6 @@ export default function ContactUs() {
 							className='peer mt-2 block w-full appearance-none border-0 border-b-2 border-neutral-300 bg-transparent py-2 px-1 text-sm text-neutral-900 focus:border-neutral-1000 focus:outline-none focus:ring-0 dark:border-neutral-600 dark:text-neutral-100 dark:focus:border-neutral-100'
 							placeholder=' '
 							required
-							value={lastname}
 							onChange={(e) => {
 								Details.setKey('lastname', e.target.value);
 							}}
@@ -92,7 +90,6 @@ export default function ContactUs() {
 						className='peer mt-2 block w-full appearance-none border-0 border-b-2 border-neutral-300 bg-transparent py-2 px-1 text-sm text-neutral-900 focus:border-black focus:outline-none focus:ring-0 dark:border-neutral-600 dark:text-neutral-100 focus:dark:border-neutral-100'
 						placeholder=' '
 						required
-						value={email}
 						onChange={(e) => {
 							Details.setKey('email', e.target.value);
 						}}
@@ -111,7 +108,6 @@ export default function ContactUs() {
 						className='peer mt-2 block w-full appearance-none border-0 border-b-2 border-neutral-300 bg-transparent py-2 px-1 text-sm text-neutral-900 focus:border-neutral-1000 focus:outline-none focus:ring-0 dark:border-neutral-600 dark:text-neutral-100 dark:focus:border-neutral-100'
 						placeholder=' '
 						required
-						value={subject}
 						onChange={(e) => {
 							Details.setKey('subject', e.target.value);
 						}}
@@ -129,7 +125,6 @@ export default function ContactUs() {
 						className='peer mt-2 block min-h-[100px] w-full resize-y appearance-none border-0 border-b-2 border-neutral-300 bg-transparent py-2 px-1 text-sm text-neutral-900 focus:border-neutral-1000 focus:outline-none  focus:ring-0 dark:border-neutral-600 dark:text-neutral-100 dark:focus:border-neutral-100'
 						placeholder=' '
 						required
-						value={message}
 						onChange={(e) => {
 							Details.setKey('message', e.target.value);
 						}}
