@@ -1,0 +1,54 @@
+---
+import ContactForm from "@/components/ContactForm";
+import socialLinks from "@/content/socialMedia";
+import Cards from "@components/Cards.astro";
+import Layout from "../layouts/Layout.astro";
+
+  const socials = socialLinks.data.slice(0, 3);
+  const socialData = {
+    title: "Socials",
+    data: socials,
+  };
+  const itemsNumber = "grid-cols-3 mx-5";
+---
+
+<Layout title="Welcome to Astro.">
+  <main class="pageTop">
+    
+    
+
+<div class="relative mx-auto mt-11 mb-10 max-w-7xl bg-neutral-200 p-4 text-neutral-900 dark:bg-neutral-900 dark:text-neutral-200 md:mt-16 ">
+      <div id="contact" class="!relative">
+        {/* Get in touch top section */}
+        <section class="w-full pt-6 text-center dark:text-neutral-100 ">
+          <div
+            class="text-6xl font-bold"
+          >
+            <h1>Get in touch</h1>
+          </div>
+
+          <div
+            class="px-4 py-7 text-lg text-neutral-600 dark:text-neutral-300"
+          >
+            <p>
+              Do you have any questions, concerns or just want to say Hi 🙋‍♂️?
+            </p>
+            <p>Here are the easiest ways to contact me!</p>
+          </div>
+          <div class="mx-auto max-w-lg text-center">
+            <Cards props={socialData} display={itemsNumber} />
+          </div>
+        </section>
+
+        <section class="mx-auto w-full px-2 dark:text-neutral-100  lg:pb-10">
+          <div class="mx-auto mt-4 w-full px-8">
+            <ContactForm client:load/>
+          </div>
+        </section>
+      </div>
+    </div>
+
+  </main>
+</Layout>
+
+<style></style>
