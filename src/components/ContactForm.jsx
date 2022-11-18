@@ -48,18 +48,18 @@ export default function ContactUs() {
 					<div className='group relative z-0 mb-6 w-full'>
 						<input
 							type='text'
-							name='firstName'
-							id='firstName'
+							name='firstname'
+							id='firstname'
 							className='peer mt-2 block w-full appearance-none border-0 border-b-2 border-neutral-300 bg-transparent py-2 px-1 text-sm text-neutral-900 focus:border-neutral-1000 focus:outline-none focus:ring-0 dark:border-neutral-600 dark:text-neutral-100 dark:focus:border-neutral-100'
 							placeholder=' '
 							required
-							value={firstName}
+							value={firstname}
 							onChange={(e) => {
 								Details.setKey('firstname', e.target.value);
 							}}
 						/>
 						<label
-							htmlFor='firstName'
+							htmlFor='firstname'
 							className='absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-neutral-600 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:font-bold peer-focus:text-neutral-1000 dark:text-neutral-400 dark:peer-focus:text-neutral-100'>
 							First name
 						</label>
@@ -67,18 +67,18 @@ export default function ContactUs() {
 					<div className='group relative z-0 mb-6 w-full'>
 						<input
 							type='text'
-							name='lastName'
-							id='lastName'
+							name='lastname'
+							id='lastname'
 							className='peer mt-2 block w-full appearance-none border-0 border-b-2 border-neutral-300 bg-transparent py-2 px-1 text-sm text-neutral-900 focus:border-neutral-1000 focus:outline-none focus:ring-0 dark:border-neutral-600 dark:text-neutral-100 dark:focus:border-neutral-100'
 							placeholder=' '
 							required
-							value={lastName}
+							value={lastname}
 							onChange={(e) => {
 								Details.setKey('lastname', e.target.value);
 							}}
 						/>
 						<label
-							htmlFor='lastName'
+							htmlFor='lastname'
 							className='absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-neutral-600 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:font-bold peer-focus:text-neutral-1000 dark:text-neutral-400 dark:peer-focus:text-neutral-100'>
 							Last name
 						</label>
