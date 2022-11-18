@@ -19,16 +19,22 @@ export default function ContactUs() {
 				subject: details.subject,
 				message: details.message,
 			}; // Request to serverless function with the query
-			await fetch('/api/send?' + new URLSearchParams(params)).then((res) => {
-				console.log(res.status);
-				if (res.status === 200) {
-					Details.setKey('loading', false);
-					toast.success('Message Sent!');
-				} else {
-					Details.setKey('loading', false);
-					toast.error('Message Failed to Send!');
-				}
-			});
+			try {
+				await fetch('/api/send?' + new URLSearchParams(params)).then((res) => {
+					console.log(res.status);
+					if (res.status === 200) {
+						Details.setKey('loading', false);
+						toast.success('Message Sent!');
+					} else {
+						Details.setKey('loading', false);
+						toast.error('Message Failed to Send!');
+					}
+				});
+			} catch (err) {
+				console.log(err);
+				Details.setKey('loading', false);
+				toast.error('Message Failed to Send!');
+			}
 		} else {
 			return;
 		}
