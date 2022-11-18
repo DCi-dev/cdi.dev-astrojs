@@ -1,13 +1,6 @@
 import sendgrid from '@sendgrid/mail';
-import { z } from 'zod';
-import { env } from '../src/env/server.mjs';
 
-sendgrid.setApiKey(env.SENDGRID_API_KEY);
-
-const ResponseData = z.object({
-	message: z.string(),
-});
-type ResponseData = z.infer<typeof ResponseData>;
+sendgrid.setApiKey(process.env.PUBLIC_SENDGRID_API_KEY as string);
 
 async function sendEmail(req, res) {
 	try {
