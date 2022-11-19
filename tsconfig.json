@@ -13,7 +13,7 @@
       "@layout/*": ["src/layout/*"],
       "@hooks/*": ["src/hooks/*"]
     },
-    "jsxImportSource": "preact",
+    "jsxImportSource": "react",
     "jsx": "react-jsx"
   }
 }
