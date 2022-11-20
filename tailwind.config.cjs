@@ -73,7 +73,7 @@ module.exports = {
 			},
 			keyframes: {
 				'slide-left': {
-					'0%': { opacity: '0', transform: 'translateX(-20px)' },
+					'0%': { opacity: '0', transform: 'translateX(-40px)' },
 					'100%': { opacity: '1', transform: 'translateX(0)' },
 				},
 				jellow: {
