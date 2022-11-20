@@ -170,7 +170,7 @@ export default function ContactUs() {
 					</label>
 				</div>
 
-				<div className='w-full overflow-hidden rounded-lg sm:max-w-sm '>
+				<div className='motion-safe:animate-jellow w-full overflow-hidden rounded-lg sm:max-w-sm '>
 					<div className='flex w-full justify-center'>
 						<button
 							type='submit'
@@ -178,9 +178,9 @@ export default function ContactUs() {
 							<div className='relative flex w-full items-center justify-center'>
 								<p
 									className={
-										loading ? 'mr-3 inline-flex animate-spin' : 'hidden'
+										loading ? ' mr-3 inline-flex animate-spin' : 'hidden'
 									}></p>
-								<p className='text-md  font-bold text-neutral-1000 md:text-lg'>
+								<p className=' text-md  font-bold text-neutral-1000 md:text-lg'>
 									{loading ? 'Sending...' : 'Send'}
 								</p>
 							</div>
