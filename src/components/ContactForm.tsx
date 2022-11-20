@@ -69,8 +69,8 @@ export default function ContactUs() {
 
 			<form
 				onSubmit={handleSubmit}
-				className='mx-auto mb-10 flex w-full max-w-xl flex-col items-center dark:text-neutral-300'>
-				<p className='px-4 py-11 text-center text-xl text-slate-600 dark:text-neutral-300'>
+				className='mx-auto flex w-full max-w-xl flex-col items-center dark:text-neutral-300'>
+				<p className='px-4 py-11 text-center font-bold text-2xl text-slate-600 dark:text-neutral-300'>
 					Or you can send me a good ol&apos; fashioned email if you want.
 				</p>
 				<div className='grid w-full grid-cols-2 gap-6'>

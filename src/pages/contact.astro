@@ -13,18 +13,15 @@ const itemsNumber = "grid-cols-3 mx-5";
 ---
 
 <Layout title="Welcome to Astro.">
-  <main class="pageTop">
-    <div
-      class="relative mx-auto mt-11 mb-10 max-w-7xl bg-neutral-200 p-4 text-neutral-900 dark:bg-neutral-900 dark:text-neutral-200 md:mt-16"
-    >
-      <div id="contact" class="!relative">
+  <main class="min-h-screen  py-12 justify-center items-center lg:flex bg-neutral-200 p-4 text-neutral-900 dark:bg-neutral-900 dark:text-neutral-200">
+    
         {/* Get in touch top section */}
-        <section class="w-full pt-6 text-center dark:text-neutral-100">
-          <div class="text-6xl font-bold">
+        <section class="w-full pt-6 text-center ">
+          <div class="text-6xl font-bold text-neutral-900 dark:text-neutral-100">
             <h1>Get in touch</h1>
           </div>
 
-          <div class="px-4 py-7 text-lg text-neutral-600 dark:text-neutral-300">
+          <div class="px-4 py-7 text-lg text-neutral-800 dark:text-neutral-300">
             <p>
               Do you have any questions, concerns or just want to say Hi 🙋‍♂️?
             </p>
@@ -40,8 +37,7 @@ const itemsNumber = "grid-cols-3 mx-5";
             <ContactForm client:load />
           </div>
         </section>
-      </div>
-    </div>
+   
   </main>
 </Layout>
 
