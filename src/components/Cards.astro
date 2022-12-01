@@ -6,15 +6,16 @@ const style = display;
 ---
 
 <div
+x-data="{ shown: false }" x-intersect="shown = true"
   class="!w-full selection:bg-neutral-300 dark:text-neutral-200 dark:selection:bg-neutral-900 dark:selection:text-neutral-400"
 >
-  <h2 class="mb-4 font-ubuntu text-2xl font-bold sm:text-3xl motion-safe:animate-slide-left">
+  <h2 x-show="shown" x-transition:enter="motion-safe:animate-slide-left" class="mb-4 font-ubuntu text-2xl font-bold sm:text-3xl motion-safe:animate-slide-left">
     {props.title}
   </h2>
 
   <div class={`cards ${style} mt-5 grid gap-2`}>
     {
-      props.data.map((item) => {
+      props.data.map((item: { url: string; name: unknown; description: string; icon: any; }) => {
         return (
           <a
             href={item.url}
