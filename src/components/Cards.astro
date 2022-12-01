@@ -6,34 +6,50 @@ const style = display;
 ---
 
 <div
-x-data="{ shown: false }" x-intersect="shown = true"
-  class="!w-full selection:bg-neutral-300 dark:text-neutral-200 dark:selection:bg-neutral-900 dark:selection:text-neutral-400"
+  class="relative mx-auto mt-11 mb-10 w-full p-4 text-neutral-900 dark:text-neutral-200 md:mt-16 2xl:max-w-6xl 3xl:max-w-7xl;"
 >
-  <h2 x-show="shown" x-transition:enter="motion-safe:animate-slide-left" class="mb-4 font-ubuntu text-2xl font-bold sm:text-3xl motion-safe:animate-slide-left">
-    {props.title}
-  </h2>
+  <div
+    x-data="{ shown: false }"
+    x-intersect="shown = true"
+    class="!w-full selection:bg-neutral-300 dark:text-neutral-200 dark:selection:bg-neutral-900 dark:selection:text-neutral-400"
+  >
+    <h2
+      x-show="shown"
+      x-transition:enter="motion-safe:animate-slide-left"
+      class="mb-4 font-ubuntu text-2xl font-bold sm:text-3xl motion-safe:animate-slide-left"
+    >
+      {props.title}
+    </h2>
 
-  <div class={`cards ${style} mt-5 grid gap-2`}>
-    {
-      props.data.map((item: { url: string; name: unknown; description: string; icon: any; }) => {
-        return (
-          <a
-            href={item.url}
-            rel="noopener noreferrer"
-            target="_blank"
-            title={item.name + " - " + item.description}
-            class="card relative flex h-28  flex-col items-center justify-center gap-3 rounded-md border border-transparent bg-neutral-100 p-8 text-neutral-900  shadow  transition-all hover:z-10 hover:origin-center  hover:text-neutral-1000 hover:shadow-lg active:!scale-105 dark:bg-neutral-1000 dark:text-neutral-200 dark:shadow-md  dark:hover:text-neutral-100 lg:hover:!scale-110"
-          >
-            <div class="card-content flex flex-col items-center justify-center">
-              <Icon name={item.icon} size="2.5em" />
-              <p class="absolute bottom-3 pt-3 select-none text-sm font-opensans">
-                {item.name}
-              </p>
-            </div>
-          </a>
-        );
-      })
-    }
+    <div class={`cards ${style} mt-5 grid gap-2`}>
+      {
+        props.data.map(
+          (item: {
+            url: string;
+            name: unknown;
+            description: string;
+            icon: any;
+          }) => {
+            return (
+              <a
+                href={item.url}
+                rel="noopener noreferrer"
+                target="_blank"
+                title={item.name + " - " + item.description}
+                class="card relative flex h-28  flex-col items-center justify-center gap-3 rounded-md border border-transparent bg-neutral-100 p-8 text-neutral-900  shadow  transition-all hover:z-10 hover:origin-center  hover:text-neutral-1000 hover:shadow-lg active:!scale-105 dark:bg-neutral-1000 dark:text-neutral-200 dark:shadow-md  dark:hover:text-neutral-100 lg:hover:!scale-110"
+              >
+                <div class="card-content flex flex-col items-center justify-center">
+                  <Icon name={item.icon} size="2.5em" />
+                  <p class="absolute bottom-3 pt-3 select-none text-sm font-opensans">
+                    {item.name}
+                  </p>
+                </div>
+              </a>
+            );
+          }
+        )
+      }
+    </div>
   </div>
 </div>
 

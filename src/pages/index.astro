@@ -1,6 +1,7 @@
 ---
 import Cards from "@components/Cards.astro";
 import Contact from "@components/home/Contact.astro";
+import Education from "@components/home/Education.astro";
 import Hero from "@components/home/Hero.astro";
 import skills from "@content/skillsData";
 import Layout from "../layouts/Layout.astro";
@@ -12,11 +13,12 @@ const itemsNumber =
 <Layout title="Welcome to Astro.">
   <main>
     <Hero />
-    <section class="relative mx-auto mt-11 mb-10 w-full max-w-6xl p-4 text-neutral-900 dark:text-neutral-200 md:mt-16 2xl:max-w-6xl 3xl:max-w-7xl;">
-      <!-- Skills -->
-      <Cards props={skills} display={itemsNumber} />
-      <Contact />
-    </section>
+    <!-- Skills -->
+    <Cards props={skills} display={itemsNumber} />
+    <!-- Education -->
+    <Education />
+    <!-- Contact -->
+    <Contact />
   </main>
 </Layout>
 

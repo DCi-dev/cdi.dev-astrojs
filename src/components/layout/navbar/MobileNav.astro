@@ -1,17 +1,21 @@
 ---
 import MobileItem from "./MobileItem.astro";
-const { handleClick} = Astro.props;
-
+const { handleClick } = Astro.props;
 ---
-<div 
-x-cloak :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']"
-class="absolute top-0 left-0 z-10 h-screen w-screen bg-neutral-100 font-normal dark:bg-neutral-1000 sm:hidden">
-    <nav class="mx-8 mt-28 flex flex-col">
-      <MobileItem onclick={handleClick} href="/">Home</MobileItem>
-      <MobileItem onclick={handleClick} href="/about">About</MobileItem>
-      <MobileItem onclick={handleClick} href="/projects">Projects</MobileItem>
-      <MobileItem onclick={handleClick} href="/certificates">Certificates</MobileItem>
-      <MobileItem onclick={handleClick} href="/stack">Stack</MobileItem>
-      <MobileItem onclick={handleClick} href="/contact">Contact</MobileItem>
-    </nav>
-  </div>
+
+<div
+  x-cloak
+  :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']"
+  class="absolute top-0 left-0 z-10 h-screen w-screen bg-neutral-100 font-normal dark:bg-neutral-1000 sm:hidden"
+>
+  <nav class="mx-8 mt-28 flex flex-col">
+    <MobileItem onclick={handleClick} href="/">Home</MobileItem>
+    <MobileItem onclick={handleClick} href="/about">About</MobileItem>
+    <MobileItem onclick={handleClick} href="/projects">Projects</MobileItem>
+    <MobileItem onclick={handleClick} href="/certificates"
+      >Certificates</MobileItem
+    >
+    <MobileItem onclick={handleClick} href="/stack">Stack</MobileItem>
+    <MobileItem onclick={handleClick} href="/contact">Contact</MobileItem>
+  </nav>
+</div>

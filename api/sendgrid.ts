@@ -1,14 +1,14 @@
-import sendgrid from '@sendgrid/mail';
+import sendgrid from "@sendgrid/mail";
 
 sendgrid.setApiKey(process.env.PUBLIC_SENDGRID_API_KEY as string);
 
 async function sendEmail(req, res) {
-	try {
-		await sendgrid.send({
-			to: 'contact@cdi.dev',
-			from: 'contact@cdi.dev',
-			subject: `[Lead from website] : ${req.body.subject}`,
-			html: `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  try {
+    await sendgrid.send({
+      to: "contact@cdi.dev",
+      from: "contact@cdi.dev",
+      subject: `[Lead from website] : ${req.body.subject}`,
+      html: `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
       <html lang="en">
       <head>
         <meta charset="utf-8">
@@ -34,12 +34,12 @@ async function sendEmail(req, res) {
               </div>
       </body>
       </html>`,
-		});
-	} catch (err) {
-		return res.status(500).json({ message: 'Error -  contact form API' });
-	}
+    });
+  } catch (err) {
+    return res.status(500).json({ message: "Error -  contact form API" });
+  }
 
-	return res.status(200).json({ message: '' });
+  return res.status(200).json({ message: "" });
 }
 
 export default sendEmail;
