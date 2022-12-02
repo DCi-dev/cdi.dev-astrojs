@@ -9,13 +9,12 @@ const { handleClick } = Astro.props;
   class="absolute top-0 left-0 z-10 h-screen w-screen bg-neutral-100 font-normal dark:bg-neutral-1000 sm:hidden"
 >
   <nav class="mx-8 mt-28 flex flex-col">
-    <MobileItem onclick={handleClick} href="/">Home</MobileItem>
-    <MobileItem onclick={handleClick} href="/about">About</MobileItem>
-    <MobileItem onclick={handleClick} href="/projects">Projects</MobileItem>
-    <MobileItem onclick={handleClick} href="/certificates"
-      >Certificates</MobileItem
-    >
-    <MobileItem onclick={handleClick} href="/stack">Stack</MobileItem>
-    <MobileItem onclick={handleClick} href="/contact">Contact</MobileItem>
+    <MobileItem href="/">Home</MobileItem>
+    <MobileItem href="#skills">Skills</MobileItem>
+    <MobileItem href="/about">About</MobileItem>
+    <MobileItem href="/projects">Projects</MobileItem>
+    <MobileItem href="/certificates">Certificates</MobileItem>
+    <MobileItem href="/stack">Stack</MobileItem>
+    <MobileItem href="/contact">Contact</MobileItem>
   </nav>
 </div>

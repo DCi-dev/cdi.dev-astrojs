@@ -14,14 +14,13 @@ const itemsNumber = "grid-cols-3 mx-5";
 <div
   class="mx-auto py-8 w-full p-4 text-neutral-900 dark:text-neutral-200 2xl:max-w-6xl 3xl:max-w-7xl"
 >
-  <div
-    class="min-h-screen py-12 justify-center items-center lg:flex p-4 gap-8 "
-  >
+  <div class="min-h-screen py-12 justify-center items-center lg:flex p-4 gap-8">
     {/* Get in touch top section */}
     <div
       class="w-full pt-6 text-center"
       x-data="{ shown: false }"
       x-intersect="shown = true"
+      id="contact"
     >
       <div class="text-6xl font-bold text-neutral-900 dark:text-neutral-100">
         <h2 x-show="shown" x-transition:enter="motion-safe:animate-slide-left">

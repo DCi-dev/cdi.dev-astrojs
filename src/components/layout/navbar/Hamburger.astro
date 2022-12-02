@@ -2,7 +2,7 @@
 const { open } = Astro.props;
 ---
 
-<div
+<button
   x-cloak
   @click="isOpen = !isOpen"
   style={{ zIndex: 1000 }}
@@ -37,4 +37,5 @@ const { open } = Astro.props;
       troke-line-join="round"
       d="M6 18L18 6M6 6l12 12"></path>
   </svg>
-</div>
+</button>
+

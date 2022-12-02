@@ -6,14 +6,11 @@ import Nav from "./Nav.astro";
 import ThemeToggle from "./ThemeToggle.astro";
 ---
 
-<script defer src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"
-></script>
-<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
 <header
   x-data="{ isOpen: false }"
   id="header"
-  class="fixed top-0 z-50 flex w-full items-center justify-between px-4 py-[10px] text-neutral-1000 dark:text-neutral-100 print:hidden sm:p-4 sm:px-6"
+  class="bg-neutral-100 dark:bg-neutral-1000 fixed top-0 z-50 flex w-full items-center justify-between px-4 py-[10px] text-neutral-1000 dark:text-neutral-100 print:hidden sm:p-4 sm:px-6"
 >
   <Hamburger />
   <MobileNav />
@@ -21,17 +18,3 @@ import ThemeToggle from "./ThemeToggle.astro";
   <Nav />
   <ThemeToggle />
 </header>
-
-<script>
-  const header = document.getElementById("header");
-
-  window.addEventListener("scroll", function () {
-    if (window.scrollY > 50) {
-      header!.classList.add("bg-neutral-100");
-      header!.classList.add("dark:bg-neutral-1000");
-    } else {
-      header!.classList.remove("bg-neutral-100");
-      header!.classList.remove("dark:bg-neutral-1000");
-    }
-  });
-</script>
