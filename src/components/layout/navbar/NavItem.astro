@@ -1,15 +1,16 @@
 ---
 export interface Props extends astroHTML.JSX.AnchorHTMLAttributes {}
 const { href, ...props } = Astro.props;
+let hrefClass = href.replace(/\/#/g, "");
 const { pathname } = Astro.url;
-const isActive = href === pathname || href === pathname.replace(/\/$/, "");
+const isHome = href === pathname;
 ---
 
 <a
   href={href}
   rel="prefetch"
-  class={`hidden rounded-md px-2 py-[3px] text-[17px] transition-all hover:bg-neutral-300 dark:hover:bg-neutral-800/50 sm:inline-block md:px-3 ${
-    isActive
+  class={`${hrefClass} hidden rounded-md px-2 py-[3px] text-[17px] transition-all hover:bg-neutral-300 dark:hover:bg-neutral-800/50 sm:inline-block md:px-3 ${
+    isHome
       ? "font-bold text-neutral-900 dark:text-primary-600"
       : "text-neutral-700 dark:text-neutral-400"
   }`}
