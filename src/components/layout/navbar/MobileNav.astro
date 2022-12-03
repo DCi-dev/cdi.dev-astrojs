@@ -6,18 +6,46 @@ const { handleClick } = Astro.props;
 <nav
   x-cloak
   :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']"
-  class="absolute top-0 left-0 z-10 h-screen w-screen bg-neutral-100 font-normal dark:bg-neutral-1000 sm:hidden"
+  class="navbar absolute top-0 left-0 z-10 h-screen w-screen bg-neutral-100 font-normal dark:bg-neutral-1000 sm:hidden"
 >
-  <div class="mx-8 mt-28 flex flex-col" id="primary-navigation">
+  <div class="nav-container mx-8 mt-28 flex flex-col" id="primary-navigation">
     <MobileItem href="/">Home</MobileItem>
     <MobileItem href="/#skills">Skills</MobileItem>
     <MobileItem href="/#education">Education</MobileItem>
-    <MobileItem href="/about">About</MobileItem>
     <MobileItem href="/projects">Projects</MobileItem>
     <MobileItem href="/#certificates">Certificates</MobileItem>
-    <MobileItem href="/stack">Uses</MobileItem>
     <MobileItem href="/#contact">Contact</MobileItem>
   </div>
 </nav>
 
-<script></script>
+<script>
+  const sections = document.querySelectorAll("section");
+  const navLi = document.querySelectorAll(".navbar .nav-container a");
+  window.addEventListener("scroll", () => {
+    let current = "";
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+      if (scrollY >= sectionTop - sectionHeight / 3) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    navLi.forEach((li) => {
+      li.classList.remove(
+        "font-bold",
+        "text-neutral-900",
+        "dark:text-primary-600"
+      );
+      li.classList.add("text-neutral-700", "dark:text-neutral-400");
+      if (li.classList.contains(current)) {
+        li.classList.remove("text-neutral-700", "dark:text-neutral-400");
+        li.classList.add(
+          "font-bold",
+          "text-neutral-900",
+          "dark:text-primary-600"
+        );
+      }
+    });
+  });
+</script>
