@@ -85,6 +85,31 @@ html.dark {
   background-color: hsl(0, 0%, 13%);
 }
 
+/* Gradient animation */
+@keyframes background-pan {
+  from {
+    background-position: 0% center;
+  }
+  to {
+    background-position: -200% center;
+  }
+}
+
+.magic-text {
+  animation: background-pan 4s linear infinite;
+  background: linear-gradient(
+    to right,
+    hsl(42, 87%, 55%),
+    hsl(36, 77%, 49%),
+    hsl(356, 75%, 53%),
+    hsl(42, 87%, 55%)
+  );
+  background-size: 200%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+}
+
 /* Adding Scroll Margin for top */
 * {
   scroll-margin-top: 80px;
