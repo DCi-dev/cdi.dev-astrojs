@@ -85,6 +85,16 @@ html.dark {
   background-color: hsl(0, 0%, 13%);
 }
 
+/* background image */
+.back-hero {
+  background-image: url("./img/background/bg-hero.svg");
+  aspect-ratio: 960/300;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 /* Gradient animation */
 @keyframes background-pan {
   from {
